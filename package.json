@@ -1,0 +1,24 @@
+{
+  "name": "bot-whatsapp",
+  "version": "1.0.0",
+  "description": "A bot to reply happy birthday message",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thisiscleverson/bot-whatsapp-js.git"
+  },
+  "author": "Cleverson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thisiscleverson/bot-whatsapp-js/issues"
+  },
+  "homepage": "https://github.com/thisiscleverson/bot-whatsapp-js#readme",
+  "dependencies": {
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.18.3"
+  }
+}
