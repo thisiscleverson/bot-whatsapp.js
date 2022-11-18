@@ -1,26 +1,28 @@
-
-
+const Phrases    = require('../phraselist.json') // ler o arquivo json com todas a frases para analisar
 const qrcode     = require('qrcode-terminal') 
 const { Client } = require('whatsapp-web.js')
-
 const client     = new Client
 
 
 //functions
 const checkMessage = (Msg) => {
-    const jsonFiles = require('../phraselist.json') // ler o arquivo json com todas a frases para analisar
-
     let msg = Msg.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toUpperCase()
 
-    for(let index in jsonFiles['phrases']){
-        //console.log(msg,':exi', msg.indexOf(jsonFiles['phrases'][index]))
-        if (msg.indexOf(jsonFiles['phrases'][index]) != -1) {
+    for(let index in Phrases['phrases']){
+        //console.log(msg,':', msg.indexOf(Phrases['phrases'][index]))
+        if (msg.indexOf(Phrases['phrases'][index]) != -1) {
             return true
         }
     }
     
     return false
 }   
+
+
+const answers = () => {
+    let index = Math.floor(Math.random() * (Phrases['answers'].length - 1) + 1) // sortear qual frase de resposta vai ser usada
+    return Phrases['answers'][index]   
+}
 
 
 // functions client 
@@ -30,13 +32,13 @@ client.on('qr', qr => {
 
 
 client.on('ready', () => {
-    console.log('bot está pronto!')
+    console.log('> o bot está pronto!')
 })
 
 
 client.on('message', message => {
     if(checkMessage(message.body) == true){
-        message.reply('Obg')
+        message.reply(answers())
     }
 })
 
