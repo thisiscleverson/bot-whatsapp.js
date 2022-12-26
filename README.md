@@ -2,8 +2,13 @@
 
 * Script de resposta automatica do WhatsApp usando JavaScript
 
+ # dependências do projeto
+ instale as dependências local do projeto para execultar o script!
+ ```shell
+    npm install
+ ```
 
-    
+
 
  use este comando para iniciar o script
  ```shell
@@ -12,7 +17,7 @@
 
  #
 
- > para adicionar mais frase vá no arquivo `phraselist.json`
+ > para adicionar novas frases, vá no arquivo `phraselist.json`
 
  ```json
  {
@@ -25,7 +30,7 @@
  }
  ```
 
- > para mudar as frases de resposta no parâmetro do arquivo `phraselist.json`
+ > para mudar as frases de resposta
 
  ```json
     {
