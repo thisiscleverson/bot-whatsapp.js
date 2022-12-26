@@ -1,6 +1,6 @@
 ## BOT WHATSAPP - JS
 
-* Script de resposta automatizada do WhatsApp usando JavaScript
+* Script de resposta automatizada do WhatsApp usando NodeJS
 
  # dependências do projeto
  instale as dependências local do projeto para execultar o script!
